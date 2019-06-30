@@ -3,12 +3,12 @@
     "name": "AMP Travel",
     "icons": [
       {
-        "src": "../img/icon/icon1.png",
+        "src": "/img/icon/icon1.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "../img/icon/icon1.png",
+        "src": "/img/icon/icon1.png",
         "type": "image/png",
         "sizes": "512x512"
       }
