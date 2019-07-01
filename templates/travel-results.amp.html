@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <title>Travel Template</title>
   <link rel="canonical" href="https://www.ampstart.com/templates/travel/travel-results.amp">
+  <link rel="manifest" href="../manifest.json">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <meta name="amp-google-client-id-api" content="googleanalytics">
 
@@ -19,7 +20,8 @@
 <script custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js" async=""></script>
 <script custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js" async=""></script>
 <script custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js" async=""></script>
-
+<script async custom-element="amp-install-serviceworker"
+  src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
 <script custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js" async=""></script>
 
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
@@ -30,7 +32,10 @@
 </head>
   <body>
 
-
+    <amp-install-serviceworker
+        src="/serviceworker.js"
+        layout="nodisplay">
+  </amp-install-serviceworker>
 <amp-state id="ui_hero"><script type="application/json">true</script></amp-state>
 <amp-state id="ui_reset"><script type="application/json">false</script></amp-state>
 <amp-state id="ui_filterPane"><script type="application/json">false</script></amp-state>
