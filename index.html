@@ -9,7 +9,8 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <meta name="amp-google-client-id-api" content="googleanalytics">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    
+    <script async custom-element="amp-install-serviceworker"
+            src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
 
     <link rel="manifest" href="../manifest.json">
     
@@ -3339,7 +3340,11 @@
     </style>
 </head>
 <body>
-    
+    <amp-install-serviceworker src="https://myk77.github.io/TravelAmp/serviceworker.js"
+                               layout="nodisplay"
+                               data-no-service-worker-fallback-url-match=".*"
+      data-no-service-worker-fallback-shell-url="https://myk77.github.io/TravelAmp/templates">
+    </amp-install-serviceworker>
     <amp-state id="ui_hero">
     <script type="application/json">
         true
