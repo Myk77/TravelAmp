@@ -28,7 +28,7 @@ AMP_SW.init(function () {
     });
     self.addEventListener('fetch', event => {
         if (event.request.mode === 'navigate') {
-            event.respondWith(fetch('/pwa'));
+            event.respondWith(fetch('/templates'));
 
             // Immediately start downloading the actual resource.
             fetch(event.request.url);
