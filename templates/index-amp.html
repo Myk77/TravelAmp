@@ -10,9 +10,9 @@
     <meta name="amp-google-client-id-api" content="googleanalytics">
     <script async="" src="https://cdn.ampproject.org/v0.js"></script>
     <link rel="manifest" href="../manifest.json">
-    
-    <script async="" src="https://cdn.ampproject.org/shadow-v0.js"></script>
-    <script src="../index.js"></script>
+
+    <script async src="https://cdn.ampproject.org/shadow-v0.js"></script>
+
     <style amp-boilerplate="">
         body {
             -webkit-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
@@ -20,6 +20,7 @@
             -ms-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
             animation: -amp-start 8s steps(1,end) 0s 1 normal both
         }
+
         .pr2 {
             font-size: 2.45rem;
             color: #fff;
@@ -27,21 +28,26 @@
             position: relative;
             left: 2%;
         }
+
         .ampstart-dropdown > [expanded] > header:after {
             content: "–";
         }
-        .ampstart-dropdown>section>header:after {
-          display: inline-block;
-          content: "+";
-          padding: 0 0 0 1.5rem;
-          color: #fff;
+
+        .ampstart-dropdown > section > header:after {
+            display: inline-block;
+            content: "+";
+            padding: 0 0 0 1.5rem;
+            color: #fff;
         }
+
         .ampstart-sidebar .ampstart-dropdown-item, .ampstart-sidebar .ampstart-dropdown header, .ampstart-sidebar .ampstart-faq-item {
             margin-bottom: 1.5rem;
         }
-        .ampstart-navbar-trigger-cross{
-            font-size:1.5rem;
+
+        .ampstart-navbar-trigger-cross {
+            font-size: 1.5rem;
         }
+
         .ampstart-sidebar {
             background-color: #000;
             color: #fff;
@@ -51,14 +57,17 @@
         .ampstart-nav-dropdown .ampstart-dropdown > section > header {
             background-color: #000;
             color: #fff;
-            border:none;
+            border: none;
         }
+
         .ampstart-sidebar .ampstart-social-follow {
             margin: 0 0 2rem;
         }
+
         .ampstart-sidebar .ampstart-dropdown-item {
             margin-bottom: 1.5rem;
         }
+
         .ampstart-nav-dropdown .ampstart-dropdown-item {
             color: #fff;
         }
@@ -69,6 +78,7 @@
             top: 24px;
             right: 2%;
         }
+
         @-webkit-keyframes -amp-start {
             from {
                 visibility: hidden
@@ -138,15 +148,15 @@
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
     <script custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js" async=""></script>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
-
+    <script src="../index.js"></script>
     <script id="amp-access" type="application/json">
         {
         "authorization": "https://ampbyexample.com/oauth/status?_=RANDOM",
         "noPingback": "true",
         "login": {
-       
+
         "sign-in": "https://ampbyexample.com/oauth/login/google",
-       
+
         "sign-out": "https://ampbyexample.com/oauth/logout"
         },
         "authorizationFallbackResponse": {
@@ -2859,7 +2869,7 @@
 
         .travel-results-result-subtext {
             color: #000;
-            font-weight:bold;
+            font-weight: bold;
         }
 
         .travel-results-result-stars {
