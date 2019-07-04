@@ -4,7 +4,7 @@
     var container = document.getElementById('container');
 
     // The AMP page you want to display
-    var url = "https://myk77.github.io/TravelAmp/index.html";
+    var url = "https://www.tripinvites.com/index.html";
 
     // Use our fetchDocument method to get the doc
     fetchDocument(url).then(function (doc) {
