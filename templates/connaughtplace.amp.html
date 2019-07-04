@@ -118,15 +118,15 @@
             display: inline-block;
         }
 
-        .nearby-places, .similar-place {
+        #other-places,.nearby-places, .similar-place {
             position: relative;
-            margin: 5%;
+            margin: 5%
         }
-        
 
-        .nearby-places,.similar-place h2 {
-            text-align: center;
-        }
+
+            #other-places, .nearby-places, .similar-place h2 {
+                text-align: center;
+            }
 
         #google-ad {
             height: 390px;
@@ -4315,7 +4315,7 @@
                 <span id="login">
                     <button amp-access="NOT loggedIn" class="login-btn" amp-access-hide on="tap:amp-access.login-sign-in">
 
-                        <img src="../img/icon/login.svg" /> 
+                        <img src="../img/icon/login.svg"alt="svg-login" /> 
                     </button>
                     <button amp-access="loggedIn" amp-access-hide on="tap:amp-access.login-sign-out">
                         Logout
@@ -4460,7 +4460,7 @@
                             <div class="similar-place">
                                 <h2>Similar Places</h2>
                                 <a href="#" class="img-gallery col-6 col-sm-6">
-                                    <amp-img lightbox="hero"
+                                    <amp-img
                                              src="../img/travel/activity/dillihaat.jpg"
                                              width="400"
                                              height="300"
@@ -4470,7 +4470,7 @@
                                     </h5>
                                 </a>
                                 <a href="#" class="img-gallery col-6 col-sm-6">
-                                    <amp-img lightbox="hero"
+                                    <amp-img 
                                              src="../img/travel/activity/chandanichowk.jpg"
                                              width="400"
                                              height="300"
@@ -4478,7 +4478,7 @@
                                     <h5>Chandni Chowk</h5>
                                 </a>
                                 <a href="#" class="img-gallery col-6 col-sm-6">
-                                    <amp-img lightbox="hero"
+                                    <amp-img 
                                              src="../img/travel/activity/Paharganj.jpg"
                                              width="400"
                                              height="300"
@@ -4486,7 +4486,7 @@
                                     <h5>Paharganj</h5>
                                 </a>
                                 <a href="#" class="img-gallery col-6 col-sm-6">
-                                    <amp-img lightbox="hero"
+                                    <amp-img
                                              src="../img/travel/activity/shoppingmarket.jpeg"
                                              width="400"
                                              height="300"
@@ -4499,7 +4499,7 @@
                          
                                 <h2>Nearby Places</h2>
                                 <a href="#" class="img-gallery col-6 col-sm-6">
-                                    <amp-img lightbox="hero"
+                                    <amp-img 
                                              src="../img/travel/attractions/gurudwara-bangla.jpg"
                                              width="400"
                                              height="300"
@@ -4509,7 +4509,7 @@
                                     </h5>
                                 </a>
                                 <a href="#" class="img-gallery col-6 col-sm-6">
-                                    <amp-img lightbox="hero"
+                                    <amp-img
                                              src="../img/travel/activity/central-park.jpg"
                                              width="400"
                                              height="300"
@@ -4517,7 +4517,7 @@
                                     <h5>Central Park</h5>
                                 </a>
                                 <a href="#" class="img-gallery col-6 col-sm-6">
-                                    <amp-img lightbox="hero"
+                                    <amp-img 
                                              src="../img/travel/activity/chkr.jpg"
                                              width="400"
                                              height="300"
@@ -4525,7 +4525,7 @@
                                     <h5>Charkha Museum</h5>
                                 </a>
                                 <a href="#" class="img-gallery col-6 col-sm-6">
-                                    <amp-img lightbox="hero"
+                                    <amp-img
                                              src="../img/travel/activity/jntrmntr.jpg"
                                              width="400"
                                              height="300"
@@ -4533,8 +4533,38 @@
                                     <h5>Jantar Mantar</h5>
                                 </a>
                             </div>
-                            <div id="">
-                                <h3>You might be interested in</h3>
+                            <div id="other-places">
+                                <h2>You might be interested in : </h2>
+                                <a href="#" class="img-gallery col-6 col-sm-6">
+                                    <amp-img src="../img/travel/attractions/lajpat-nagar-shopping-market1.jpg"
+                                             width="400"
+                                             height="300"
+                                             layout="responsive"></amp-img>
+                                    <h5>
+                                    Lajpat Nagar
+                                    </h5>
+                                </a>
+                                <a href="#" class="img-gallery col-6 col-sm-6">
+                                    <amp-img src="../img/travel/activity/india-gate-memorial.jpg    "
+                                             width="400"
+                                             height="300"
+                                             layout="responsive"></amp-img>
+                                    <h5>India Gate</h5>
+                                </a>
+                                <a href="#" class="img-gallery col-6 col-sm-6">
+                                    <amp-img src="../img/travel/activity/Akshardham-thumbnail.png"
+                                             width="400"
+                                             height="300"
+                                             layout="responsive"></amp-img>
+                                    <h5>Akshardham Temple</h5>
+                                </a>
+                                <a href="#" class="img-gallery col-6 col-sm-6">
+                                    <amp-img src="../img/travel/activity/redfort.jpg"
+                                             width="400"
+                                             height="300"
+                                             layout="responsive"></amp-img>
+                                    <h5>Red Fort</h5>
+                                </a>
                             </div>
                         </div>
                     </div>
