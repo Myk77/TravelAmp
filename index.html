@@ -11,16 +11,143 @@
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-install-serviceworker"
             src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900,900i&display=swap" rel="stylesheet">
+
+
 
     <link rel="manifest" href="manifest.json">
-    
+
     <style amp-boilerplate="">
+        amp-sidebar {
+            position: fixed !important;
+            top: 0;
+            max-height: 100vh !important;
+            height: 100vh;
+            max-width: 100%;
+        }
+
+        .travel-header {
+            background: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.4)),to(transparent));
+            background: -o-linear-gradient(top,rgba(255,255,255,.4),transparent);
+            background: linear-gradient(180deg,rgba(255,255,255,.7),transparent);
+            color: #fff;
+            height: 300px;
+            color: var(--color-white);
+        }
+
+        .cursor {
+            cursor: pointer;
+        }
+
+        .logo_img {
+            max-width: 300px;
+            position: absolute;
+            top: 0.5rem;
+            left: 4.5rem;
+        }
+
+            .logo_img img {
+                width: 80%;
+            }
+
+        .login-btn {
+            width: 43px;
+            height: 43px;
+            background: transparent;
+            padding: 10px 14px;
+            border-radius: 24px;
+            color: #fff;
+            outline: 0px;
+            border: #fff solid 2px;
+            margin-right: 0px;
+        }
+
+        
+
+        .search_ic_btn {
+            width: 43px;
+            height: 43px;
+            background: transparent;
+            padding: 10px 14px;
+            border-radius: 24px;
+            color: #fff;
+            outline: 0px;
+            border: #fff solid 2px;
+            margin-right: 0px;
+        }
+
+        .search_ic_btn img {
+            height: 16px;
+            width: 16px;
+        }
+
+        .login-btn img {
+            height: 16px;
+            width: 16px;
+        }
+
+        .activity_base {
+        }
+
+            .activity_base a {
+                display: inline-block;
+            }
+
+        .top_adventures {
+        }
+
+            .top_adventures .lis {
+                display: inline-block;
+                width: 21rem;
+                vertical-align: top;
+            }
+
+
+
+        .td-mobile-close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1000;
+            height: 42px;
+            width: 42px;
+            line-height: 70px;
+            font-size: 21px;
+            color: #fff;
+            top: 4px;
+        }
+
+        .td-mobile-content {
+            padding: 20px 20px 0;
+            line-height: 21px;
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .ampstart-label {
+            font-size: 21px;
+            color: #4f4f4f;
+            line-height: 21px;
+            letter-spacing: normal;
+        }
+
+        .td-mobile-content li a {
+            display: block;
+            line-height: 21px;
+            font-size: 21px;
+            color: #fff;
+            margin-left: 0;
+            padding: 12px 45px 12px 12px;
+            font-weight: bold;
+        }
+
         body {
             -webkit-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
             -moz-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
             -ms-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
             animation: -amp-start 8s steps(1,end) 0s 1 normal both
         }
+
         .pr2 {
             font-size: 2.45rem;
             color: #fff;
@@ -28,38 +155,51 @@
             position: relative;
             left: 2%;
         }
+
         .ampstart-dropdown > [expanded] > header:after {
             content: "–";
         }
-        .ampstart-dropdown>section>header:after {
-          display: inline-block;
-          content: "+";
-          padding: 0 0 0 1.5rem;
-          color: #fff;
+
+        .ampstart-dropdown > section > header:after {
+            display: inline-block;
+            content: "+";
+            padding: 0 0 0 1.5rem;
+            color: #fff;
         }
+
         .ampstart-sidebar .ampstart-dropdown-item, .ampstart-sidebar .ampstart-dropdown header, .ampstart-sidebar .ampstart-faq-item {
             margin-bottom: 1.5rem;
         }
-        .ampstart-navbar-trigger-cross{
-            font-size:1.5rem;
+
+        .ampstart-navbar-trigger-cross {
+            font-size: 1.5rem;
         }
+
         .ampstart-sidebar {
             background-color: #000;
             color: #fff;
-            width: 300px;
+            width: 100%;
+        }
+
+        .i-amphtml-accordion-header {
+            padding-right: 20px;
+            padding-left: 14px;
         }
 
         .ampstart-nav-dropdown .ampstart-dropdown > section > header {
             background-color: #000;
             color: #fff;
-            border:none;
+            border: none;
         }
+
         .ampstart-sidebar .ampstart-social-follow {
             margin: 0 0 2rem;
         }
+
         .ampstart-sidebar .ampstart-dropdown-item {
             margin-bottom: 1.5rem;
         }
+
         .ampstart-nav-dropdown .ampstart-dropdown-item {
             color: #fff;
         }
@@ -70,6 +210,7 @@
             top: 24px;
             right: 2%;
         }
+
         @-webkit-keyframes -amp-start {
             from {
                 visibility: hidden
@@ -135,27 +276,12 @@
     <script custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js" async=""></script>
     <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async=""></script>
     <script custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js" async=""></script>
-    <script async custom-element="amp-access" src="https://cdn.ampproject.org/v0/amp-access-0.1.js"></script>
+
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-    <script custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js" async=""></script>
+
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
 
-    <script id="amp-access" type="application/json">
-        {
-        "authorization": "https://ampbyexample.com/oauth/status?_=RANDOM",
-        "noPingback": "true",
-        "login": {
-       
-        "sign-in": "https://ampbyexample.com/oauth/login/google",
-       
-        "sign-out": "https://ampbyexample.com/oauth/logout"
-        },
-        "authorizationFallbackResponse": {
-        "error": true,
-        "loggedIn": false
-        }
-        }
-    </script>
+
     <style amp-custom="">
         /*! Bassplate | MIT License | http://github.com/basscss/bassplate */
 
@@ -505,7 +631,7 @@
             overflow: hidden
         }
 
-       
+
         .overflow-auto {
             overflow: auto
         }
@@ -1479,7 +1605,7 @@
         body {
             background: #fff;
             color: #323a43;
-            font-family: Source Sans Pro,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;
+            font-family: 'Poppins', sans-serif;
             min-width: 100%;
             overflow-x: hidden;
             font-smooth: always;
@@ -2551,7 +2677,8 @@
         }
 
         .travel-discover-heading {
-            font-size: 3.5rem
+            font-size: 3.5rem;
+            font-weight: 800;
         }
 
         .travel-discover-panel-subheading, .travel-discover-subheading {
@@ -2803,7 +2930,8 @@
         .travel-popular-tilt-left, .travel-popular-tilt-right {
             display: inline-block;
             position: relative;
-            perspective: 1000px;
+            perspective: none;
+            margin-left: -10px;
             perspective-origin: 50% calc(100% + 4rem)
         }
 
@@ -2857,7 +2985,7 @@
 
         .travel-results-result-subtext {
             color: #000;
-            font-weight:bold;
+            font-weight: bold;
         }
 
         .travel-results-result-stars {
@@ -3038,7 +3166,7 @@
 
         .travel-hero-search .ampstart-btn {
             font-size: 1.25rem;
-            background-color: #8b58e3;
+            background-color: #ff9933;
             animation: a .4s .4s ease-in-out both
         }
 
@@ -3082,7 +3210,11 @@
             }
 
             .travel-hero-heading {
-                font-size: 4.6rem
+                font-size: 4.5rem;
+                text-shadow: 2px 2px 2px #000;
+                text-transform: uppercase;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 900;
             }
 
             .travel-hero-subheading {
@@ -3481,27 +3613,34 @@
     <section class="travel-main-wrapper overflow-hidden" role="main">
         <section class="relative z2">
             <header class="travel-header absolute top-0 right-0 left-0">
-                <span role="button" aria-label="open sidebar" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger  pr2  ">
+                <span role="button"  aria-label="open sidebar" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger  pr2 cursor  ">
                     ☰
                 </span>
-                <span class="px1 md-px2 py1 md-py2 justify-between">
-                    <a href="#"aria-label="link" class="travel-icon-logo mx-auto inline-block circle">
-                        <svg class="travel-icon travel-icon-logo h2" viewBox="0 0 100 100"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="7.5"><circle cx="50" cy="50" r="45"></circle><path d="M20.395 83.158c-2.37-10.263-.79-18.553 4.737-24.87 8.29-9.472 17.763-1.183 26.052-9.472 8.29-8.29 2.37-18.948 10.658-26.053 5.526-4.737 12.237-6.316 20.132-4.737M39.084 95c-2.788-10.2-1.912-17.304 2.627-21.316 6.808-6.017 14.956-.68 24.088-9.623 9.13-8.94 3.062-17.133 10.255-23.534 4.795-4.267 10.282-5.668 16.46-4.203"></path></g></svg>
+                <span class=" justify-between logo_img">
+                    <a href="#" aria-label="link" class="travel-icon-logo mx-auto inline-block circle">
+                        <img src="../img/icon/logo.png" alt="svg-login">
+
+                        <svg style="display:none;" class="travel-icon travel-icon-logo h2" viewBox="0 0 100 100"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="7.5"><circle cx="50" cy="50" r="45"></circle><path d="M20.395 83.158c-2.37-10.263-.79-18.553 4.737-24.87 8.29-9.472 17.763-1.183 26.052-9.472 8.29-8.29 2.37-18.948 10.658-26.053 5.526-4.737 12.237-6.316 20.132-4.737M39.084 95c-2.788-10.2-1.912-17.304 2.627-21.316 6.808-6.017 14.956-.68 24.088-9.623 9.13-8.94 3.062-17.133 10.255-23.534 4.795-4.267 10.282-5.668 16.46-4.203"></path></g></svg>
                     </a>
 
                 </span>
-                <!--<a href="#"aria-label="link"  class="text-decoration-none mr2 ampstart-headerbar-fixed-link ">
-                    <span class="ampstart-headerbar-icon-wrapper relative"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" overflow="visible"><circle fill="none" stroke="#000" stroke-width="1.68" stroke-miterlimit="10" cx="4.67" cy="4.67" r="3.83"></circle><path fill="none" stroke="#000" stroke-width="1.78" stroke-linecap="round" stroke-miterlimit="10" d="M7.258 7.77l2.485 2.485"></path></svg></span>
-                </a>-->
-                <span id="login">
-                    <button amp-access="NOT loggedIn" amp-access-hide on="tap:amp-access.login-sign-in">
-                        Login
-                    </button>
-                    <button amp-access="loggedIn" amp-access-hide on="tap:amp-access.login-sign-out">
-                        Logout
-                    </button>
-                </span>
-            </header>
+                <a href="#" aria-label="link" class="text-decoration-none mr2 ampstart-headerbar-fixed-link ">
+                    <span class="search_ic relative">
+                        <span class="search_ic_btn"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" overflow="visible"><circle fill="none" stroke="#000" stroke-width="1.68" stroke-miterlimit="10" cx="4.67" cy="4.67" r="3.83"></circle><path fill="none" stroke="#000" stroke-width="1.78" stroke-linecap="round" stroke-miterlimit="10" d="M7.258 7.77l2.485 2.485"></path></svg></span>
+               </span>
+                        </a>
+                <a href="#"><span id="login">
+                    <span class="login-btn">
+                        <img src="../img/icon/login.png" alt="svg-login">
+                    </span>
+                    </a>
+                    <span class="login-btn" style="display:none;">
+                        <button amp-access="loggedIn" class="login-btn" amp-access-hide on="tap:amp-access.login-sign-out">
+                            <img src="../img/icon/login.svg" alt="svg-login">
+                        </button>
+                        </a>
+                    </span>
+</header>
         </section>
 
         <!-- Hero -->
@@ -3617,8 +3756,8 @@
                     <h3 class="bold h1 line-height-2 mb2 xs-hide sm-hide center">Browse by activity</h3>
                 </div>
                 <div class="overflow-scroll">
-                    <div class="travel-overflow-container">
-                        <div class="flex justify-center p1 md-px1 mxn1">
+                    <div class="travel-overflow-container activity_base">
+                        <div class=" justify-center p1 md-px1 mxn1">
                             <a href="templates/travel-results.amp"aria-label="link" class="travel-activities-activity travel-type-active mx1" on="
               tap:AMP.setState({
                 ui_viewIndex: 1,
@@ -3793,9 +3932,9 @@
                         <h3 class="h1 bold line-height-2 xs-hide sm-hide center">Top Adventures Near You</h3>
                     </header>
                     <div class="overflow-scroll">
-                        <div class="travel-overflow-container">
-                            <div class="flex px1 md-px2 mxn1">
-                                <div class="m1 mt3 mb2">
+                        <div class="travel-overflow-container top_adventures">
+                            <div class=" px1 md-px2 mxn1">
+                                <div class=" lis m1 mt3 mb2">
                                     <div class="travel-popular-tilt-right mb1">
                                         <div class="relative travel-results-result">
                                             <a class="travel-results-result-link block relative" aria-label="link" href="#">
@@ -3833,7 +3972,7 @@
                                         <span class="travel-results-result-subtext"><svg class="travel-icon" viewBox="0 0 77 100"><g fill="none" fill-rule="evenodd"><path stroke="currentColor" stroke-width="7.5" d="M38.794 93.248C58.264 67.825 68 49.692 68 38.848 68 22.365 54.57 9 38 9S8 22.364 8 38.85c0 10.842 9.735 28.975 29.206 54.398a1 1 0 0 0 1.588 0z"></path><circle cx="38" cy="39" r="10" fill="currentColor"></circle></g></svg> Oaxaca</span>
                                     </div>
                                 </div>
-                                <div class="m1 mt3 mb2">
+                                <div class="lis m1 mt3 mb2">
                                     <div class="travel-results-result relative mb1">
                                         <div class="relative travel-results-result">
                                             <a class="travel-results-result-link block relative" aria-label="link" href="#">
@@ -3874,7 +4013,7 @@
                                         <span class="travel-results-result-subtext"><svg class="travel-icon" viewBox="0 0 77 100"><g fill="none" fill-rule="evenodd"><path stroke="currentColor" stroke-width="7.5" d="M38.794 93.248C58.264 67.825 68 49.692 68 38.848 68 22.365 54.57 9 38 9S8 22.364 8 38.85c0 10.842 9.735 28.975 29.206 54.398a1 1 0 0 0 1.588 0z"></path><circle cx="38" cy="39" r="10" fill="currentColor"></circle></g></svg> Oaxaca</span>
                                     </div>
                                 </div>
-                                <div class="m1 mt3 mb2">
+                                <div class="lis m1 mt3 mb2">
                                     <div class="travel-popular-tilt-left mb1">
                                         <div class="relative travel-results-result">
                                             <a class="travel-results-result-link block relative" aria-label="link" href="#">
@@ -4096,38 +4235,14 @@
         </div>
     </section>
     <!-- Start Sidebar -->
-    <amp-sidebar id="header-sidebar" class="ampstart-sidebar px3  " layout="nodisplay">
+    <amp-sidebar id="header-sidebar" class="ampstart-sidebar td-mobile-content px2  " layout="nodisplay">
         <div class="flex justify-start items-center ampstart-sidebar-header">
-            <div role="button" aria-label="close sidebar" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger-cross items-start">✕</div>
+            <div role="button"  aria-label="close sidebar" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger-cross items-start td-mobile-close">✕</div>
         </div>
         <nav class="ampstart-sidebar-nav ampstart-nav">
             <ul class="list-reset m0 p0 ampstart-label">
-                <li class="ampstart-nav-item ampstart-nav-dropdown relative ">
-                    <!-- Start Dropdown-inline -->
-                    <amp-accordion layout="container" disable-session-states="" class="ampstart-dropdown">
-                        <section>
-                            <header>Photography</header>
-                            <ul class="ampstart-dropdown-items list-reset m0 p0">
-                                <li class="ampstart-dropdown-item"><a href="#" aria-label="link" class="text-decoration-none">Animals</a></li>
-                                <li class="ampstart-dropdown-item"><a href="#" aria-label="link" class="text-decoration-none">Landscape</a></li>
-                            </ul>
-                        </section>
-                    </amp-accordion>
-                    <!-- End Dropdown-inline -->
-                </li>
-                <li class="ampstart-nav-item ampstart-nav-dropdown relative ">
-                    <!-- Start Dropdown-inline -->
-                    <amp-accordion layout="container" disable-session-states="" class="ampstart-dropdown">
-                        <section>
-                            <header>Travel</header>
-                            <ul class="ampstart-dropdown-items list-reset m0 p0">
-                                <li class="ampstart-dropdown-item"><a href="#"aria-label="link" class="text-decoration-none">Europe</a></li>
-                                <li class="ampstart-dropdown-item"><a href="#" aria-label="link" class="text-decoration-none">USA</a></li>
-                            </ul>
-                        </section>
-                    </amp-accordion>
-                    <!-- End Dropdown-inline -->
-                </li>
+                
+               
             </ul>
         </nav>
 
@@ -4149,8 +4264,34 @@
             </li>
         </ul>-->
         <ul class="ampstart-sidebar-faq list-reset m0">
-            <li class="ampstart-faq-item"><a href="#"aria-label="link" class="text-decoration-none">About</a></li>
-            <li class="ampstart-faq-item"><a href="#" aria-label="link"class="text-decoration-none">Contact</a></li>
+            <li class="ampstart-nav-item ampstart-nav-dropdown relative ">
+                <!-- Start Dropdown-inline -->
+                <amp-accordion layout="container" disable-session-states="" class="ampstart-dropdown">
+                    <section>
+                        <header>Photography</header>
+                        <ul class="ampstart-dropdown-items list-reset m0 p0">
+                            <li class="ampstart-dropdown-item"><a href="#" aria-label="link" class="text-decoration-none">Animals</a></li>
+                            <li class="ampstart-dropdown-item"><a href="#" aria-label="link" class="text-decoration-none">Landscape</a></li>
+                        </ul>
+                    </section>
+                </amp-accordion>
+                <!-- End Dropdown-inline -->
+            </li>
+            <li class="ampstart-nav-item ampstart-nav-dropdown relative ">
+                <!-- Start Dropdown-inline -->
+                <amp-accordion layout="container" disable-session-states="" class="ampstart-dropdown">
+                    <section>
+                        <header>Travel</header>
+                        <ul class="ampstart-dropdown-items list-reset m0 p0">
+                            <li class="ampstart-dropdown-item"><a href="#" aria-label="link" class="text-decoration-none">Europe</a></li>
+                            <li class="ampstart-dropdown-item"><a href="#" aria-label="link" class="text-decoration-none">USA</a></li>
+                        </ul>
+                    </section>
+                </amp-accordion>
+                <!-- End Dropdown-inline -->
+            </li>
+            <li class="ampstart-faq-item"><a href="#" aria-label="link" class="text-decoration-none">About</a></li>
+            <li class="ampstart-faq-item"><a href="#" aria-label="link" class="text-decoration-none">Contact</a></li>
         </ul>
     </amp-sidebar>
     <!-- End Sidebar -->
