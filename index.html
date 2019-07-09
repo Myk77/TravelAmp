@@ -26,6 +26,11 @@
             max-width: 100%;
         }
 
+        .txt_col_bold {
+            font-weight: 900;
+            color: #f93;
+        }
+
         .travel-header {
             background: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.4)),to(transparent));
             background: -o-linear-gradient(top,rgba(255,255,255,.4),transparent);
@@ -46,15 +51,20 @@
             left: 4.5rem;
         }
 
-            .logo_img img {
+        .logo_img img {
                 width: 80%;
-            }
+        }
+
+        .white_logo img {
+            width: 260px;
+            padding-right: 20px;
+        }
 
         .login-btn {
             width: 43px;
             height: 43px;
             background: transparent;
-            padding: 10px 14px;
+            padding: 10px 11px;
             border-radius: 24px;
             color: #fff;
             outline: 0px;
@@ -62,13 +72,17 @@
             margin-right: 0px;
         }
 
-        
+        .search_ic {
+            position: absolute;
+            right: 6%;
+            top: 8%;
+        }
 
         .search_ic_btn {
             width: 43px;
             height: 43px;
             background: transparent;
-            padding: 10px 14px;
+            padding: 10px 11px;
             border-radius: 24px;
             color: #fff;
             outline: 0px;
@@ -76,14 +90,18 @@
             margin-right: 0px;
         }
 
-        .search_ic_btn img {
-            height: 16px;
-            width: 16px;
-        }
+            .search_ic_btn img {
+                height: 20px;
+                width: 20px;
+                top: 3px;
+                position: relative;
+            }
 
         .login-btn img {
-            height: 16px;
-            width: 16px;
+            height: 20px;
+            width: 20px;
+            top: 4px;
+            position: relative;
         }
 
         .activity_base {
@@ -106,6 +124,7 @@
 
         .td-mobile-close {
             position: absolute;
+            cursor:pointer;
             right: 0;
             top: 0;
             z-index: 1000;
@@ -137,8 +156,15 @@
             font-size: 21px;
             color: #fff;
             margin-left: 0;
-            padding: 12px 45px 12px 12px;
+            padding: 5px 45px 12px 12px;
             font-weight: bold;
+        }
+
+        .travel-header .pr2 {
+            color: #138808;
+        }
+            .ampstart-nav-dropdown .ampstart-dropdown > section > header {
+            padding-bottom: 5px;
         }
 
         body {
@@ -1604,7 +1630,7 @@
 
         body {
             background: #fff;
-            color: #323a43;
+            color: #000;
             font-family: 'Poppins', sans-serif;
             min-width: 100%;
             overflow-x: hidden;
@@ -2348,11 +2374,11 @@
             }
 
             .travel-link.gray, .travel-link.gray:visited {
-                color: #8f98a3
+                color: #fff
             }
 
                 .travel-link.gray:hover {
-                    color: #b4b4b4
+                    color: #138808;
                 }
 
         .travel-pill {
@@ -2673,8 +2699,21 @@
 
         .travel-discover-panel {
             max-width: 440px;
-            background-color: #fff
+            background-color: #138808;
+            color: #fff;
         }
+         .travel-discover-panel h2{
+            color:#fff;
+        }
+        .travel-discover-panel p{
+            color:#fff;
+        }
+            .travel-discover-panel a {
+                color: #fe9833;
+                text-decoration: none;
+                font-family: inherit;
+                transition: color .15s ease-in;
+            }
 
         .travel-discover-heading {
             font-size: 3.5rem;
@@ -2980,8 +3019,10 @@
             }
 
         .travel-results-result-text {
-            color: #323a43
+            color: #323a43;
+            font-size: 1rem;
         }
+        
 
         .travel-results-result-subtext {
             color: #000;
@@ -3192,6 +3233,21 @@
         .travel-activities {
             animation: a .4s .6s ease-in-out both
         }
+        .travel-activities h3{
+            text-transform: capitalize;
+            padding-top: 41px;
+            font-weight: 300;
+        }
+
+        .travel-popular h3 {
+            text-transform: capitalize;
+            font-weight: 300;
+        }
+
+        .travel-featured h3 {
+            text-transform: capitalize;
+            font-weight: 300;
+        }
 
         @media (min-width:52.06rem) {
             .travel-hero {
@@ -3299,7 +3355,7 @@
         }
 
         .travel-footer .bg-black {
-            background-color: #323a43
+            background-color: #ff9933;
         }
 
         .travel-footer .gray {
@@ -3335,13 +3391,15 @@
             }
 
                 .travel-footer .travel-input-group > button {
-                    border-color: #e3e5e8;
+                    border-color: #138808;
+                    background: #138808;
                     border-top-style: solid;
-                    border-left-width: 0
+                    border-left-width: 0;
+                    color: #fff;
                 }
 
                 .travel-footer .travel-input-group > .travel-input {
-                    border-color: #e3e5e8
+                    border-color: #138808;
                 }
         }
 
@@ -3456,7 +3514,7 @@
         }
 
         .travel-search {
-            background-color: #8b58e3
+            background-color: #138808
         }
 
         .travel-search-heading {
@@ -3464,7 +3522,8 @@
         }
 
         .travel-search .travel-link {
-            background-color: #fff
+            background-color: #f93;
+            color: #fff;
         }
     </style>
 </head>
@@ -3625,8 +3684,11 @@
 
                 </span>
                 <a href="#" aria-label="link" class="text-decoration-none mr2 ampstart-headerbar-fixed-link ">
-                    <span class="search_ic relative">
-                        <span class="search_ic_btn"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" overflow="visible"><circle fill="none" stroke="#000" stroke-width="1.68" stroke-miterlimit="10" cx="4.67" cy="4.67" r="3.83"></circle><path fill="none" stroke="#000" stroke-width="1.78" stroke-linecap="round" stroke-miterlimit="10" d="M7.258 7.77l2.485 2.485"></path></svg></span>
+                    <span class="search_ic">
+                        <span class="search_ic_btn">
+                            <img src="../img/icon/search.png" alt="svg-login">
+
+                        </span>
                </span>
                         </a>
                 <a href="#"><span id="login">
@@ -3733,7 +3795,7 @@
                 <div class="max-width-3 mx-auto px1 md-px2">
                     <div class="flex justify-between items-center">
                         <header>
-                            <h2 class="travel-discover-heading bold line-height-2 xs-hide sm-hide">Discover<br class="md-hide lg-hide"> Adventures</h2>
+                            <h2 class="travel-discover-heading bold line-height-2 xs-hide sm-hide">Discover</br><span style="color:#ff9933;">Adventures</span></h2>
                             <div class="travel-discover-subheading h2 xs-hide sm-hide">Get inspired and find your next big trip</div>
                         </header>
                         <div class="travel-discover-panel travel-shadow-hover px3 py2 ml1 mr3 myn3 xs-hide sm-hide">
@@ -3742,7 +3804,7 @@
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit amet dolor set.
                             </p>
                             <p class="my1">
-                                <a class="travel-link" aria-label="link"  href="#">Read more</a>
+                                <a aria-label="link"  href="#">Read more</a>
                             </p>
                         </div>
                     </div>
@@ -3753,7 +3815,7 @@
             <section class="travel-activities pb4 pt3 relative">
                 <div class="max-width-3 mx-auto px1 md-px2">
                     <h3 class="bold h1 line-height-2 mb2 md-hide lg-hide" aria-hidden="true">Browse<br>by activity</h3>
-                    <h3 class="bold h1 line-height-2 mb2 xs-hide sm-hide center">Browse by activity</h3>
+                    <h3 class="bold h1 line-height-2 mb2 xs-hide sm-hide center"><span class="txt_col_bold">Browse</span> by activity</h3>
                 </div>
                 <div class="overflow-scroll">
                     <div class="travel-overflow-container activity_base">
@@ -3928,8 +3990,8 @@
                 <!-- Popular -->
                 <section class="travel-popular pb4 pt3 relative">
                     <header class="max-width-3 mx-auto px1 md-px2">
-                        <h3 class="h1 bold line-height-2 md-hide lg-hide" aria-hidden="true">Top Adventures<br>Near You</h3>
-                        <h3 class="h1 bold line-height-2 xs-hide sm-hide center">Top Adventures Near You</h3>
+                        <h3 class="h1 bold line-height-2 md-hide lg-hide" aria-hidden="true"><span class="txt_col_bold">Top Adventures</span><br>Near You</h3>
+                        <h3 class="h1 bold line-height-2 xs-hide sm-hide center"><span class="txt_col_bold">Top Adventures</span> Near You</h3>
                     </header>
                     <div class="overflow-scroll">
                         <div class="travel-overflow-container top_adventures">
@@ -4059,7 +4121,7 @@
                 <!-- Featured -->
                 <section class="travel-featured pt3 relative clearfix">
                     <header class="max-width-2 mx-auto px1 md-px2 relative">
-                        <h3 class="travel-featured-heading h1 bold line-height-2 mb2 center">Featured Destinations</h3>
+                        <h3 class="travel-featured-heading h1 bold line-height-2 mb2 center"><span class="txt_col_bold">Featured </span>Destinations</h3>
                     </header>
                     <div class="max-width-3 mx-auto relative">
                         <div class="travel-featured-grid flex flex-wrap items-stretch">
@@ -4199,9 +4261,11 @@
                         <!-- Left column -->
                         <div class="max-width-3 mx-auto px1 md-px2">
                             <div class="flex pt3 md-pt4 col-12 md-col-6 pr3">
-                                <div class="col-2">
+                                <div class="col-8 white_logo">
                                     <a href="#" aria-label="link" class="inline-block h2 line-height-1 circle white">
-                                        <svg class="travel-icon travel-icon-logo h2" viewBox="0 0 100 100"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="7.5"><circle cx="50" cy="50" r="45"></circle><path d="M20.395 83.158c-2.37-10.263-.79-18.553 4.737-24.87 8.29-9.472 17.763-1.183 26.052-9.472 8.29-8.29 2.37-18.948 10.658-26.053 5.526-4.737 12.237-6.316 20.132-4.737M39.084 95c-2.788-10.2-1.912-17.304 2.627-21.316 6.808-6.017 14.956-.68 24.088-9.623 9.13-8.94 3.062-17.133 10.255-23.534 4.795-4.267 10.282-5.668 16.46-4.203"></path></g></svg>
+                                        <svg class="travel-icon travel-icon-logo h2" viewBox="0 0 100 100">
+                                            <img src="../img/icon/logo-white.png" alt="svg-login">
+                                        </svg>
                                     </a>
                                 </div>
                                 <div class="col-5">
@@ -4223,8 +4287,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="py3 gray">
-                                &copy; Copyright 2017
+                            <div class="py1 gray">
+                                &copy; Copyright 2019,Trip Invites.
                             </div>
                         </div>
                         <!--/ Left column -->
@@ -4263,7 +4327,7 @@
                 <a href="#" target="_blank" class="inline-block p1" aria-label="Link to AMP HTML E-mail"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="18.4" viewBox="0 0 56 43"><title>email</title><path d="M10.5 6.4C9.1 6.4 8 7.5 8 8.9v21.3c0 1.3 1.1 2.5 2.5 2.5h34.9c1.4 0 2.5-1.2 2.5-2.5V8.9c0-1.4-1.1-2.5-2.5-2.5H10.5zm2.1 2.5h30.7L27.9 22.3 12.6 8.9zm-2.1 1.4l16.6 14.6c.5.4 1.2.4 1.7 0l16.6-14.6v19.9H10.5V10.3z" class="ampstart-icon ampstart-icon-email"></path></svg></a>
             </li>
         </ul>-->
-        <ul class="ampstart-sidebar-faq list-reset m0">
+        <ul class="td-mobile-content ampstart-sidebar-faq list-reset m0">
             <li class="ampstart-nav-item ampstart-nav-dropdown relative ">
                 <!-- Start Dropdown-inline -->
                 <amp-accordion layout="container" disable-session-states="" class="ampstart-dropdown">
@@ -4290,8 +4354,8 @@
                 </amp-accordion>
                 <!-- End Dropdown-inline -->
             </li>
-            <li class="ampstart-faq-item"><a href="#" aria-label="link" class="text-decoration-none">About</a></li>
-            <li class="ampstart-faq-item"><a href="#" aria-label="link" class="text-decoration-none">Contact</a></li>
+            <li class=""><a href="#" aria-label="link" class="text-decoration-none">About</a></li>
+            <li class=""><a href="#" aria-label="link" class="text-decoration-none">Contact</a></li>
         </ul>
     </amp-sidebar>
     <!-- End Sidebar -->
